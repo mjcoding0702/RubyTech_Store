@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RubyTech Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <!-- ---navbar--- -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+      
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" 
+            onclick="menutoggle()">
+          </div>
+    </div> 
+
+<!-- ---contact details--- -->
+    <div id="contact-body" class="container">
+
+        <h3 id="contact-title">Contact us</h3><br />
+        <p id="contact-detail">Please drop us a message and we will respond to you within 24 hours.</p>
+        
+        <div class="row row-contact">
+            <div class="col-contact1">
+                <form class="contact-form" action="/post" method="post">
+                    <input class="form-control" name="name" placeholder="Name..." /><br />
+                    <input class="form-control" name="phone" placeholder="Phone..." /><br />
+                    <input class="form-control" name="email" placeholder="E-mail..." /><br />
+                    <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"></textarea><br />
+                    <input id="contact-btn" class="btn btn-primary" type="submit" value="Send" /><br /><br />
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+<!-- -------footer------- -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+
+            <section class="newsletter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="content">
+                                <form>
+                                    <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="sub-input" placeholder="Enter your email">
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="button" onclick="subscribe()">Subscribe Now</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2022 - RubyTech Sdn Bhd</p>
+    </div>
+</div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px";
+            } 
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+</html>

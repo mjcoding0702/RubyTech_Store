@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RubyTech Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+    
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" 
+            onclick="menutoggle()">
+        </div>
+    </div> 
+<!-- ----- cart items details ----- -->
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg">
+                    <div>
+                        <small>Ergonomic Wireless Mouse</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input id="qty1" type="number" value="1"></td>
+            <td id="displayTotal1">RM189</td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg">
+                    <div>
+                        <small>Ergonomic Split Keyboard</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input id="qty2" type="number" value="1"></td>
+            <td id="displayTotal2">RM348</td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg">
+                    <div>
+                        <small>Bluetooth Ear Buds</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input id="qty3" type="number" value="1"></td>
+            <td id="displayTotal3">RM50</td>
+        </tr>
+    </table>
+
+    <div class="total-price"> 
+        <table>
+            <tr>
+                <td>Total</td>
+                <td id="displayGrandTotal">RM587</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="checkout-container">
+        <a id="checkout-btn" href="checkout.html">Checkout &#8594</a>
+    </div>
+    
+</div>
+
+<!-- -------footer------- -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+
+            <section class="newsletter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="content">
+                                <form>
+                                    <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="sub-input" placeholder="Enter your email">
+                                        <span class="input-group-btn">
+                                            <button class="btn" type="button" onclick="subscribe()">Subscribe Now</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2022 - RubyTech Sdn Bhd</p>
+    </div>
+</div>
+
+<!-- -------js for toggle menu ------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px";
+            } 
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+<!-- ----js for total calculation---- -->
+    <script>
+        const quantity1 = document.getElementById("qty1");
+        const quantity2 = document.getElementById("qty2");
+        const quantity3 = document.getElementById("qty3");
+        const displayTotal1 = document.getElementById("displayTotal1");
+        const displayTotal2 = document.getElementById("displayTotal2");
+        const displayTotal3 = document.getElementById("displayTotal3");
+        const displayGrandTotal = document.getElementById("displayGrandTotal");
+
+        //Variables that store value
+        var subtotal1;
+        var subtotal2;
+        var subtotal3;
+        var grandTotal=587;
+
+
+        quantity1.addEventListener("click",calculateFunction1);
+        function calculateFunction1(){
+            subtotal1 = 189 * quantity1.value;
+            grandTotal = subtotal1 + 398;
+            displayTotal1.innerHTML = `RM${subtotal1}`;
+            displayGrandTotal.innerHTML = `RM${grandTotal}`;
+        }
+        
+        quantity2.addEventListener("click",calculateFunction2);
+        function calculateFunction2(){
+            subtotal2 = 348 * quantity2.value;
+            grandTotal += subtotal2;
+            displayTotal2.innerHTML = `RM${subtotal2}`;
+            displayGrandTotal.innerHTML = `RM${grandTotal}`;
+        }
+
+        quantity3.addEventListener("click",calculateFunction3);
+        function calculateFunction3(){
+            subtotal3 = 50 * quantity3.value;
+            grandTotal += subtotal3;
+            displayTotal3.innerHTML = `RM${subtotal3}`;
+            displayGrandTotal.innerHTML = `RM${grandTotal}`;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        // const quantity1 = document.getElementById("qty1");
+        // const total1 = document.getElementById("subtotal1");
+
+
+        // quantity1.addEventListener("click",calculateFunction1);
+        // function calculateFunction1(){
+        //     total1.innerHTML = `RM ${quantity1.value*50}`;
+        // }
+
+        // const quantity2 = document.getElementById("qty2");
+        // const total2 = document.getElementById("subtotal2");
+
+
+        // quantity2.addEventListener("click",calculateFunction2);
+        // function calculateFunction2(){
+        //     total2.innerHTML = `RM ${quantity2.value*50}`;
+        // }
+
+        // const quantity3 = document.getElementById("qty3");
+        // const total3 = document.getElementById("subtotal3");
+
+
+        // quantity3.addEventListener("click",calculateFunction3);
+        // function calculateFunction3(){
+        //     total3.innerHTML = `RM ${quantity3.value*50}`;
+        // }
+    </script>
+
+
+
+
+
+</body>
+</html>
