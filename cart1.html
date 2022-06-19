@@ -55,42 +55,13 @@
             <td id="displayTotal1">RM189</td>
         </tr>
 
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-2.jpg">
-                    <div>
-                        <small>Ergonomic Split Keyboard</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input id="qty2" type="number" value="1"></td>
-            <td id="displayTotal2">RM348</td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-3.jpg">
-                    <div>
-                        <small>Bluetooth Ear Buds</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input id="qty3" type="number" value="1"></td>
-            <td id="displayTotal3">RM50</td>
-        </tr>
     </table>
 
     <div class="total-price"> 
         <table>
             <tr>
                 <td>Total</td>
-                <td id="displayGrandTotal">RM587</td>
+                <td id="displayGrandTotal">RM189</td>
             </tr>
         </table>
     </div>
@@ -180,13 +151,13 @@
         var subtotal1;
         var subtotal2;
         var subtotal3;
-        var grandTotal=587;
+        var grandTotal=189;
 
 
         quantity1.addEventListener("click",calculateFunction1);
         function calculateFunction1(){
             subtotal1 = 189 * quantity1.value;
-            grandTotal = subtotal1 + 398;
+            grandTotal = subtotal1;
             displayTotal1.innerHTML = `RM${subtotal1}`;
             displayGrandTotal.innerHTML = `RM${grandTotal}`;
         }
