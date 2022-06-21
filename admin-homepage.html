@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RubyTech Store | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="admin-homepage.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+    
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="admin-homepage.html">Home</a></li>
+                    <li><a href="admin-all-product.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" 
+            onclick="menutoggle()">
+        </div>
+        
+        <div class="row">
+            <div class="col-2 header-text">
+                <h1>Enhance Your Working <br>Productivity!</h1>
+                <p>Want to work faster? Bring your tech setup to the next level with <br> Rubytech Mice, Keyboards, Combos for Business.</p>
+                <a href="admin-all-product.html" class="btn">Explore Now&#8594</a>
+            </div>
+            <div class="col-2">
+                <img src="images/image1.png">
+            </div>
+        </div>
+    </div>
+</div>  
+
+    <!-- ----- featured categories ------ -->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="images/category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="images/category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="images/category-3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----- featured products ------ -->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="admin-product-details.html"><img src="images/product-1.jpg"></a>
+                <a href="admin-product-details.html"><h4>Ergonomic Wireless Mouse</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM100.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details-iphone.html"><img src="images/product-2.jpg"></a>
+                <a href="product-details.html"><h4>Bluetooth Mini Keyboard</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM59.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details-keyboard.html"><img src="images/product-3.jpg"></a>
+                <a href="product-details.html"><h4>Ergonomic Split Keyboard</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM348.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details-headset.html"><img src="images/product-4.jpg"></a>
+                <a href="product-details.html"><h4>Bluetooth Hi-Fi Headset</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM1,099.00</p>
+            </div>
+        </div>
+
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-details-charger.html"><img src="images/product-5.jpg"></a>
+                <a href="product-details.html"><h4>Wireless Phone Charger</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM29.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details.html"><img src="images/product-6.jpg"></a>
+                <a href="product-details.html"><h4>37" 4K Display Monitor</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM1,690.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details.html"><img src="images/product-7.jpg"></a>
+                <a href="product-details.html"><h4>Portable Computer Speaker</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM250.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details.html"><img src="images/product-8.jpg"></a>
+                <a href="product-details.html"><h4>Adjustable Laptop Stand</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM65.00</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <a href="product-details.html"><img src="images/product-9.jpg"></a>
+                <a href="product-details.html"><h4>Soft Sponge Mouse Pad</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM38.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details.html"><img src="images/product-10.jpg"></a>
+                <a href="product-details.html"><h4>65W AC Laptop Charger</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM120.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details-earbuds.html"><img src="images/product-11.jpg"></a>
+                <a href="product-details-earbuds.html"><h4>Bluetooth Ear Buds</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM50.00</p>
+            </div>
+            <div class="col-4">
+                <a href="product-details.html"><img src="images/product-12.jpg"></a>
+                <a href="product-details.html"><h4>Webcam 4k 30fps</h4></a>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>RM199.00</p>
+            </div>
+        </div>
+    </div>
+<!-- -------- offer -------- -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/exclusive.png" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on RubyTech Store</p>
+                    <h1>Smart Band 6</h1>
+                    <small>The Mi Smart Band 6 features a 39.9% larger (than Mi Band 5) AMOLED color full-touch display with adjustable brightness, so everything is clear.</small>
+                    <a href="product-details-miband.html" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------testimonial-------     -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Used products from Rubytech for over 2 years. They have assisted me during WFH period. High recommended.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <img src="images/user-1.png">
+                    <h3>Camille Vasquez</h3>
+                </div>
+
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>They have wonderful products but the customer service was unsatisfactory. Improvement needed.</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <img src="images/user-2.png">
+                    <h3>Johnny Depp</h3>
+                </div>
+
+                <div class="col-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>I can work for long hours after using ergonomic keyboard and mouse from RubyTech. Love it!</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <img src="images/user-3.png">
+                    <h3>Amber Heard</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------brands-------- -->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/logo-1.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-2.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-3.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-4.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-5.png">
+                </div>
+            </div>
+        </div>
+    </div>     
+ 
+<!-- -------footer------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+
+                <section class="newsletter">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="content">
+                                    <form>
+                                        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                                        <div class="input-group">
+                                            <input type="email" class="form-control" id="sub-input" placeholder="Enter your email">
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="button" onclick="subscribe()">Subscribe Now</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - RubyTech Sdn Bhd</p>
+        </div>
+    </div>
+
+<!-- -------js for toggle menu ------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px";
+            } 
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        function subscribe(){
+            var subscribeInput = document.getElementById("sub-input");
+            // alert("Successfully added your email to the mailing list.");
+            alert("Successfully added " + subscribeInput.value + " to the mailing list");
+            subscribeInput.value = '';
+        }
+    </script>
+
+</body>
+</html>
